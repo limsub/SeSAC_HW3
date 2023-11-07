@@ -59,6 +59,7 @@ class ShoppingListViewController: BaseViewController {
     }
     
     func bind() {
+        // data와 tableView 연결
         viewModel.rxData
             .bind(to: tableView.rx.items(cellIdentifier: ShoppingListTableViewCell.description(), cellType: ShoppingListTableViewCell.self)) { (row, element, cell) in
                 
@@ -84,5 +85,13 @@ class ShoppingListViewController: BaseViewController {
                 
             }
             .disposed(by: disposeBag)
+        
+        // addButton과 data 연결
+        addView.addButton.rx.tap
+            .subscribe(with: self) { owner , _ in
+                <#code#>
+            }
     }
+    
+    
 }
