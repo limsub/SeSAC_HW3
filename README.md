@@ -21,3 +21,6 @@
   - 데이터 추가 시 .value()로 값 가져오기
     - subject와 relay 사용 시 차이점 (try 구문)
 
+
+- ValidationVC
+  - Input/Output 패턴 practice
